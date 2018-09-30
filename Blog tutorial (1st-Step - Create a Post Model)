@@ -1,0 +1,6 @@
+Cake PHP mdel interact with database.
+CakePHP’s model class files go in /app/Model, and the file we’ll be creating will be saved to /app/Model/Post.php
+The completed file should look like this:
+
+class Post extends AppModel {
+}
