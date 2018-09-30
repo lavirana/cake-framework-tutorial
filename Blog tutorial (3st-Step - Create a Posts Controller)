@@ -1,0 +1,17 @@
+Next, we’ll create a controller for our posts. The controller is where all the controlling logic for post interaction will happen. 
+In a nutshell, it’s the place where you play with the models and get post-related work done. We’ll place this new controller in
+a file called PostsController.php inside the /app/Controller directory. Here’s what the basic controller should look like:
+
+how about we add an activity to our controller. Activities frequently speak to a solitary capacity or interface in an application. 
+For instance, when clients ask for www.example.com/posts/file (which is the same as www.example.com/posts/), 
+they may hope to see a posting of posts. The code for that activity would look something like this:
+
+
+
+class PostsController extends AppController {
+    public $helpers = array('Html', 'Form');
+
+    public function index() {
+        $this->set('posts', $this->Post->find('all'));
+    }
+}
